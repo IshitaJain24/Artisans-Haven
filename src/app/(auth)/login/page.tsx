@@ -54,6 +54,7 @@ export default function LoginPage() {
           isVerifiedArtisan: false, // Artisans are NOT verified on sign-up
         });
         await handleRedirect(user);
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       } catch (e) {
         setError('Failed to create account. Email might be in use.');
       }
@@ -61,6 +62,7 @@ export default function LoginPage() {
       try {
         const userCredential = await signInWithEmailAndPassword(auth, email, password);
         await handleRedirect(userCredential.user);
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       } catch (e) {
         setError('Failed to log in. Check credentials.');
       }
@@ -85,6 +87,7 @@ export default function LoginPage() {
         });
       }
       await handleRedirect(user);
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (e) {
       setError('Failed to sign in with Google.');
     }
