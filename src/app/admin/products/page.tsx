@@ -19,7 +19,7 @@ export default function AdminProductApprovalPage() {
 
     // Security check: ensure user is logged in and is an admin
     useEffect(() => {
-        // @ts-ignore - We are checking for our custom isAdmin flag
+        
         if (!authLoading && (!user || !user.isAdmin)) {
             router.push('/'); // Redirect non-admins
         } else if (!authLoading && user) {

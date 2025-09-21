@@ -33,7 +33,6 @@ export default function AdminDeliveriesPage() {
 
     useEffect(() => {
         if (!authLoading) {
-            // @ts-ignore - Check for our custom isAdmin flag
             if (!user || !user.isAdmin) {
                 router.push('/'); // Security: redirect non-admins
             } else {

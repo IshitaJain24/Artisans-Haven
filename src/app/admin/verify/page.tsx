@@ -24,7 +24,7 @@ export default function AdminVerificationPage() {
     useEffect(() => {
         // Security check: ensure user is logged in and is an admin
         if (!authLoading) {
-            // @ts-ignore - Check for our custom isAdmin flag
+            
             if (!user || !user.isAdmin) {
                 router.push('/'); // Redirect non-admins to the homepage
             } else {
